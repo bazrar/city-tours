@@ -1,0 +1,78 @@
+@import '../../index.scss';
+
+.navbar {
+    background-color: $mainBlack;
+    display: grid; 
+    grid-template-columns: auto 1fr; 
+    padding: 0.5rem 1rem;
+}
+
+.navbar img {
+    height: 50px; 
+    width:50px; 
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style-type: none; 
+    display:grid; 
+    align-self: center;
+    text-align:center;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    text-decoration: none; 
+    color: $mainGrey; 
+    transition: .2s linear; 
+  
+ &:hover {
+     color: $mainGreen;
+ }
+}
+
+// .navbar {
+//     background: $mainBlack;
+//     padding: 0.5rem 1rem;
+//     display: grid;
+//    grid-template-columns: auto 1fr;
+
+  
+// }
+
+// .nav-links {
+//     list-style-type: none;
+//     display: grid; 
+//     grid-template-columns: repeat(3, 1fr);
+//     text-align:center;
+//     align-self:center;
+// }
+
+// .nav-link {
+    
+//     color: $mainGrey;
+//     text-transform: capitalize;
+//     text-decoration:none;
+//     font-size: 1.2rem;
+//     transition: all 0.2s linear;
+    
+    
+//     &:hover {
+//         color:$mainGreen;
+//     }
+// }
+
+
+// .active {
+//     color: $mainGreen;
+// }
+
+
+// .navbar .logo {
+//     height: 50px;
+//     width: 50px;
+//     border-radius: 50%;
+// }
