@@ -2,6 +2,9 @@ import React from 'react'
 import './Tour.scss'
 
 class Tour extends React.Component {
+    state = {
+        showInfo: false
+    }
     render() {
         const {id, city, name, img, info} = this.props.tour
        return (
@@ -10,17 +13,20 @@ class Tour extends React.Component {
                     <img
                     src={img} 
                     alt='city' />
-                     <span className='close-btn'><i className='fas fa-window-close'></i></span>
-p</div>
+                     <span className='close-btn'>
+                         <i onClick={this.props.clicked} 
+                         className='fas fa-window-close'></i></span>
+                    </div>
                     <div className="tour-info">
 
                     <h3>{city}</h3>
                     <h4>{name}</h4>
                     <h5>
                         {info} 
-                        <span><i className='fas fa-caret-down'></i></span>
+                        <span><i onClick={() => this.setState({showInfo:true})}className='fas fa-caret-down'></i></span>
                     </h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, nihil?</p>
+                    {this.state.showInfo &&  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, nihil?</p> }
+                   
                 
                     </div>
             </article>

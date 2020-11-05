@@ -7,7 +7,13 @@ export default class TourList extends Component {
     state = {
         tours: tourData
     }
-    render() {
+    deleteTourHandler = (id) => {
+        const {tours} = this.state
+        const filter = tours.filter(tour => tour.id !== id)
+        this.setState({tours: filter})
+
+    }
+        render() {
         const {tours} = this.state
         return (
          <section className='tourlist'>
@@ -15,6 +21,7 @@ export default class TourList extends Component {
                 return(
                     <Tour key={tour.id}
                     tour= {tour}
+                    clicked= {() => this.deleteTourHandler(tour.id)}
                     />
                 )
             })}
